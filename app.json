@@ -1,0 +1,28 @@
+{
+	"name": "UEHToR",
+	"description": "Run UEHToR on heroku",
+	"repository": "https://github.com/shakilofficial0/UEHToR",
+	"keywords": ["UEHToR"],
+	"env": {
+		"HEROKU_APP_NAME": {
+			"description": "This should be the same as \"App name\" above."
+		},
+		"UEHTOR_SECRET": {
+			"description": "UEHToR's secret",
+			"value": "cyberpass"
+		},
+		"RCLONE_CONFIG": {
+			"description": "Rclone config to mount in one line, replace line breaks with \"\\n\"",
+			"required": false
+		},
+		"RCLONE_DESTINATION": {
+			"description": "Path to store your file in your Rclone drive. Must start with a forward slash.",
+			"required": false
+		}
+	},
+	"buildpacks": [
+		{
+			"url": "heroku/nodejs"
+		}
+	]
+}
