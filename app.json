@@ -7,7 +7,7 @@
 		"HEROKU_APP_NAME": {
 			"description": "This should be the same as \"App name\" above."
 		},
-		"UEHTOR_SECRET": {
+		"ARIA2C_SECRET": {
 			"description": "UEHToR's secret",
 			"value": "cyberpass"
 		},
