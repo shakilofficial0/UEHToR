@@ -173,7 +173,8 @@ function check(form)/*function to check userid & password*/
 
 
 	if (correct == 1) // when correct is true this statement is run.
-		{	var ueh = btoa(${process.env.ARIA2C_SECRET});
+		{	var ueh = ${process.env.ARIA2C_SECRET};
+			var ueh1 = btoa(ueh)
 			window.open('/ariang/#!/settings/rpc/set/wss/'+location.hostname+'/443/jsonrpc/'${process.env.ARIA2C_SECRET}+ueh , "_self") // launches the bookings page.	
 			wrong == 0;
 		}
