@@ -17,8 +17,6 @@ const proxy = httpProxy.createProxyServer({
 })
 const server = http.createServer(app)
 
-var urnm =  btoa(process.env.USERNAME)
-var pwrd =  btoa(process.env.PASSWORD)
 
 // Proxy websocket
 server.on('upgrade', (req, socket, head) => {
