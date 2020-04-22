@@ -11,6 +11,10 @@
 			"description": "UEHToR's secret",
 			"value": "cyberpass"
 		},
+		"GOOGLE_SITE_VERIFICATION": {
+			"description": "Go to Google Search Console, Add Your Property by URL Prefix and Paste the HTML Tag here",
+			"required": false
+		},
 		"RCLONE_CONFIG": {
 			"description": "Rclone config to mount in one line, replace line breaks with \"\\n\"",
 			"required": false
