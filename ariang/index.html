@@ -30,7 +30,7 @@ var allMetaElements = document.getElementsByTagName('meta');
 for (var i=0; i<allMetaElements.length; i++) { 
   if (allMetaElements[i].getAttribute("property") == "og:url") { 
      //make necessary changes
-     allMetaElements[i].setAttribute('content', + window.location.hostname); 
+     allMetaElements[i].setAttribute('content', window.location.hostname); 
      //no need to continue loop after making changes.
      break;
   } 
