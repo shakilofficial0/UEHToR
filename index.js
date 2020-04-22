@@ -131,18 +131,7 @@ for (var i=0; i<allMetaElements.length; i++) {
     </div>
     <script type="text/javascript" src="ariang/js/main.js"></script>
 	
-	<script>
-var form = document.getElementById('alpha')
-var submitBtn = form.querySelector('[type="button"]')
 
-submitBtn.disabled = true
-
-form.addEventListener('input', function () {
-  submitBtn.disabled = !form.checkValidity()
-})
-
-
-</script>
 	
 	
 	<script type="text/javascript">
