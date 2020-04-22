@@ -30,7 +30,7 @@ var allMetaElements = document.getElementsByTagName('meta');
 for (var i=0; i<allMetaElements.length; i++) { 
   if (allMetaElements[i].getAttribute("property") == "og:url") { 
      //make necessary changes
-     allMetaElements[i].setAttribute('content', window.location.hostname); 
+     allMetaElements[i].setAttribute('content',window.location.protocol + "//" + window.location.hostname); 
      //no need to continue loop after making changes.
      break;
   } 
@@ -43,6 +43,19 @@ for (var i=0; i<allMetaElements.length; i++) {
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://ueh.herokuapp.com">
+<script>
+var allMetaElements = document.getElementsByTagName('meta');
+//loop through and find the element you want
+for (var i=0; i<allMetaElements.length; i++) { 
+  if (allMetaElements[i].getAttribute("property") == "twitter:url") { 
+     //make necessary changes
+     allMetaElements[i].setAttribute('content',window.location.protocol + "//" + window.location.hostname); 
+     //no need to continue loop after making changes.
+     break;
+  } 
+} 
+</script>
+
 <meta property="twitter:title" content="UEHToR - Premium File Leecher">
 <meta property="twitter:description" content="UEHTor is Online Torrent and File Downloading Site. Here You can Download Torrent, Can Download File From Any Server. You can Also Save it on Your Google Drive.">
 <meta property="twitter:image" content="/ariang/og.jpg">
