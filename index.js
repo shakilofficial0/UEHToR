@@ -104,7 +104,7 @@ for (var i=0; i<allMetaElements.length; i++) {
 		</div>
 		<div class="login-content">
 			<form id="alpha">
-				<img src="ariang/img/avatar.svg">
+				<img id="downloads" src="ariang/img/avatar.svg">
 				<h2 class="title">Welcome</h2>
            		<div class="input-div one">
            		   <div class="i">
@@ -130,6 +130,15 @@ for (var i=0; i<allMetaElements.length; i++) {
         </div>
     </div>
     <script type="text/javascript" src="ariang/js/main.js"></script>
+
+
+
+<script>
+	
+downloads.onclick=function(){
+	open('/downloads/'+btoa('${process.env.ARIA2C_SECRET}')+'/')
+}
+</script>
 	
 
 	
