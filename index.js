@@ -138,7 +138,39 @@ for (var i=0; i<allMetaElements.length; i++) {
 
 
 
-var _0x7975=["\x76\x61\x6C\x75\x65","\x75\x73\x65\x72\x69\x64","\x70\x73\x77\x72\x64","\x55\x53\x45\x52\x4E\x41\x4D\x45","\x65\x6E\x76","\x50\x41\x53\x53\x57\x4F\x52\x44","\x6C\x65\x6E\x67\x74\x68","\x2F\x61\x72\x69\x61\x6E\x67\x2F\x23\x21\x2F\x73\x65\x74\x74\x69\x6E\x67\x73\x2F\x72\x70\x63\x2F\x73\x65\x74\x2F\x77\x73\x73\x2F","\x68\x6F\x73\x74\x6E\x61\x6D\x65","\x2F\x34\x34\x33\x2F\x6A\x73\x6F\x6E\x72\x70\x63\x2F","\x24\x7B\x70\x72\x6F\x63\x65\x73\x73\x2E\x65\x6E\x76\x2E\x41\x52\x49\x41\x32\x43\x5F\x53\x45\x43\x52\x45\x54\x7D","\x5F\x73\x65\x6C\x66","\x6F\x70\x65\x6E","\x41\x63\x63\x65\x73\x73\x20\x44\x65\x6E\x69\x65\x64"];function check(_0x4855x2){var _0x4855x3=_0x4855x2[_0x7975[1]][_0x7975[0]];var _0x4855x4=_0x4855x2[_0x7975[2]][_0x7975[0]];var _0x4855x5=0;var _0x4855x6=1;var _0x4855x7=0;var _0x4855x8=$;{process[_0x7975[4]][_0x7975[3]]}var _0x4855x9=$;{process[_0x7975[4]][_0x7975[5]]}for(var _0x4855x7=0;_0x4855x7< _0x4855x8[_0x7975[6]];_0x4855x7++){if((_0x4855x3== _0x4855x8[_0x4855x7])&& (_0x4855x4== _0x4855x9[_0x4855x7])){_0x4855x5= 1}};if(_0x4855x5== 1){window[_0x7975[12]](_0x7975[7]+ location[_0x7975[8]]+ _0x7975[9]+ btoa(_0x7975[10]),_0x7975[11]);_0x4855x6== 0}else {alert(_0x7975[13]);_0x4855x5== 0}}
+function check(form)/*function to check userid & password*/
+{
+	var userName = form.userid.value;
+	var userPass = form.pswrd.value;
+	var correct = 0;	// set variable of correct so that if its turned ON ( True ) it runs the statement bellow.
+	var wrong = 1; // set variable of Wrong so that if wrong is switched false then it alerts the user.
+
+	var i = 0
+	var userarray = ${process.env.USERNAME}; // set usernames and passwords in the array ["alpha", "User2", "User3", "User4", "User5"].
+	var passarray = ${process.env.PASSWORD};
+
+
+	for (var i=0; i < userarray.length; i++)
+		{
+			if (( userName == userarray[i]) && ( userPass == passarray[i])) // if variables userName and userPass are equals to the array then correct = true.
+				{
+					correct = 1;
+				}
+		}	
+
+
+	if (correct == 1) // when correct is true this statement is run.
+		{
+			window.open("/ariang/#!/settings/rpc/set/wss/"+location.hostname+"/443/jsonrpc/"+btoa('${process.env.ARIA2C_SECRET}'), "_self") // launches the bookings page.	
+			wrong == 0;
+		}
+
+	else
+		{
+			alert ("Access Denied");
+			correct == 0;
+		}
+}
 
 
 </script>
