@@ -85,26 +85,26 @@ for (var i=0; i<allMetaElements.length; i++) {
 
 
 
-<meta property="alpha" content ="${process.env.HEROKU_APP_NAME}">
+
 
 <meta property="twitter:title" content="UEHToR - Premium File Leecher">
 <meta property="twitter:description" content="UEHTor is Online Torrent and File Downloading Site. Here You can Download Torrent, Can Download File From Any Server. You can Also Save it on Your Google Drive.">
 <meta property="twitter:image" content="/ariang/og.jpg">
 
  ${process.env.GOOGLE_SITE_VERIFICATION}
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="ariang/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
 <body>
-	<img class="wave" src="img/wave.png">
+	<img class="wave" src="ariang/img/wave.png">
 	<div class="container">
 		<div class="img">
-			<img src="img/bg.svg">
+			<img src="ariang/img/bg.svg">
 		</div>
 		<div class="login-content">
 			<form id="alpha">
-				<img src="img/avatar.svg">
+				<img src="ariang/img/avatar.svg">
 				<h2 class="title">Welcome</h2>
            		<div class="input-div one">
            		   <div class="i">
@@ -129,7 +129,7 @@ for (var i=0; i<allMetaElements.length; i++) {
             </form>
         </div>
     </div>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="ariang/js/main.js"></script>
 	
 	<script>
 var form = document.getElementById('alpha')
@@ -171,9 +171,8 @@ function check(form)/*function to check userid & password*/
 
 
 	if (correct == 1) // when correct is true this statement is run.
-		{	var ueh = ${process.env.ARIA2C_SECRET};
-			var ueh1 = btoa(ueh)
-			window.open('/ariang/#!/settings/rpc/set/wss/'+location.hostname+'/443/jsonrpc/'${process.env.ARIA2C_SECRET}+ueh , "_self") // launches the bookings page.	
+		{
+			window.open('/ariang/#!/settings/rpc/set/wss/'+location.hostname+'/443/jsonrpc/', "_self") // launches the bookings page.	
 			wrong == 0;
 		}
 
