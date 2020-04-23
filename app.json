@@ -17,11 +17,11 @@
 		},
 		"USERNAME": {
 			"description": "Add Username like this. Note : 1st Username => 1st Password",
-			"value": "["alpha", "User2", "User3", "User4", "User5"]"
+			"value": "[\"alpha", "User2", "User3", "User4", "User5\"]"
 		},
 		"PASSWORD": {
 			"description": "Add Username like this. Note : 1st Username => 1st Password",
-			"value": "["alpha", "Pass2", "Pass3", "Pass4", "Pass5"]"
+			"value": "[\"alpha", "Pass2", "Pass3", "Pass4", "Pass5\"]"
 		},
 		"RCLONE_CONFIG": {
 			"description": "Rclone config to mount in one line, replace line breaks with \"\\n\"",
