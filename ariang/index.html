@@ -22,7 +22,7 @@
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://ueh.herokuapp.com">
+<meta property="og:url" content="https://${process.env.HEROKU_APP_NAME}.herokuapp.com">
 
 <script>
 var allMetaElements = document.getElementsByTagName('meta');
@@ -42,7 +42,7 @@ for (var i=0; i<allMetaElements.length; i++) {
 <meta property="og:image" content="/ariang/og.jpg">
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://ueh.herokuapp.com">
+<meta property="twitter:url" content="https://${process.env.HEROKU_APP_NAME}.herokuapp.com">
 <script>
 var allMetaElements = document.getElementsByTagName('meta');
 //loop through and find the element you want
