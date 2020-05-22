@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+var allMetaElements = document.getElementsByTagName('meta');
+//loop through and find the element you want
+for (var i=0; i<allMetaElements.length; i++) { 
+  if (allMetaElements[i].getAttribute("http-equiv") == "Refresh") { 
+     //make necessary changes
+     allMetaElements[i].setAttribute('content',"5;url=" + window.location.protocol + "//" + window.location.hostname + "/downloads/" + btoa('${process.env.ARIA2C_SECRET}') + "/"); 
+     //no need to continue loop after making changes.
+     break;
+  } 
+} 
+</script>
+
+<meta http-equiv="Refresh" content="5;url=">
+</head>
+
+<body>
+<p>Sorry! We have moved! The new URL is: <a href="https://www.w3schools.com">https://www.w3schools.com</a></p>
+<p>You will be redirected to the new address in five seconds.</p>
+<p>If you see this message for more than 5 seconds, please click on the link above!</p>
+</body>
+
+</html>
