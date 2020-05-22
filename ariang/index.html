@@ -23,6 +23,14 @@
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://${process.env.HEROKU_APP_NAME}.herokuapp.com">
+	
+	
+	<script>
+	
+downloads.onclick=function(){
+	open('/downloads/'+btoa('${process.env.ARIA2C_SECRET}')+'/')
+}
+</script>
 
 <script>
 var allMetaElements = document.getElementsByTagName('meta');
@@ -640,13 +648,7 @@ Global Rate Limit
 <script src="js/aria-ng-994a2d3441.min.js">
 
 </script>
-  
-  <script>
-	
-downloads.onclick=function(){
-	open('/downloads/'+btoa('${process.env.ARIA2C_SECRET}')+'/')
-}
-</script>
+
 
 </body>
 
