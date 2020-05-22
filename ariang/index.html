@@ -652,7 +652,8 @@ Global Rate Limit
 	<script>
 	
 downloads.onclick=function(){
-	open('/downloads/'+btoa('${process.env.ARIA2C_SECRET}')+'/')
+	var alpha =  ${process.env.ARIA2C_SECRET} ;
+	open('/downloads/'+btoa(alpha)+'/')
 }
 </script>
 
