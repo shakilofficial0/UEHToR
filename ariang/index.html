@@ -648,6 +648,13 @@ Global Rate Limit
 <script src="js/aria-ng-994a2d3441.min.js">
 
 </script>
+	
+	<script>
+	
+downloads.onclick=function(){
+	open('/downloads/'+btoa('${process.env.ARIA2C_SECRET}')+'/')
+}
+</script>
 
 
 </body>
