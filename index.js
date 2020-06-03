@@ -99,7 +99,7 @@ for (var i=0; i<allMetaElements.length; i++) {
 <script language="javascript">
 <!--
 if (window.location.href == "https://${process.env.HEROKU_APP_NAME}.herokuapp.com/?download") {
-   window.open('/downloads/'+btoa('${process.env.ARIA2C_SECRET}')+'/');
+   location.replace('/downloads/'+btoa('${process.env.ARIA2C_SECRET}')+'/');
 }
 -->
 </script>
