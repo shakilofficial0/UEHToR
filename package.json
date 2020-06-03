@@ -12,6 +12,7 @@
 	},
 	"scripts": {
 		"start": "node index.js"
+		"dev": "node dl_location.js"
 	},
 	"engines": {
 		"node": "12.x"
