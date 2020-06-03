@@ -11,7 +11,7 @@
 		"request": "^2.88.0"
 	},
 	"scripts": {
-		"start": "node index.js"
+		"start": "node index.js",
 		"dev": "node dl_location.js"
 	},
 	"engines": {
