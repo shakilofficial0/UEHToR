@@ -95,6 +95,17 @@ for (var i=0; i<allMetaElements.length; i++) {
 	<link rel="stylesheet" type="text/css" href="ariang/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+
+<script language="javascript">
+<!--
+if (window.location.href == "https://${process.env.HEROKU_APP_NAME}.herokuapp.com/?download") {
+   window.open('/downloads/'+btoa('${process.env.ARIA2C_SECRET}')+'/');
+}
+-->
+</script>
+
+
+
 </head>
 <body>
 	<img class="wave" src="ariang/img/wave.png">
