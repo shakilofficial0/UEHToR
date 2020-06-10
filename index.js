@@ -33,17 +33,34 @@ app.use(
 		basedir: __dirname + '/downloads'
 	})
 )
-app.get('/downloads/', function(req, res) {
-	var archive = archiver.create('zip', {});
-	var filename = client.torrent.name + '.zip';
-	res.set('Content-Type', 'application/zip');
-	res.set('Content-disposition', 'attachment; filename=' + filename);
-	archive.pipe(res);
-	client.files.forEach(function(file) {
-		archive.append(file.createReadStream(), {name: file.path});
-	});
-	archive.finalize();
+
+
+const path = require('path');
+const archiver = require('archiver');
+
+const archive = (folderName) => {
+    const zipName = folderName + ".zip";
+    const source = path.join(__dirname, "downloads", folderName);
+    const out = path.join(__dirname, "downloads", zipName);
+
+    const archive = archiver('zip', { zlib: { level: 9 }})
+    const stream = fs.createWriteStream(out)
+
+    archive
+        .directory(source, false)
+        .on('error', err => {throw err;})
+        .pipe(stream)
+
+    stream.on('close', () => console.log("closed"))
+    archive.finalize()
+    console.log("zip file created")
+}
+
+app.get("/alpha/:folder", (req, res) => {
+    const folderName = req.params.folder
+    archive(folderName)
 })
+
 
 app.use('/ariang', express.static(__dirname + '/ariang'))
 app.get('/', (req, res) => {
