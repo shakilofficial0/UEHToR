@@ -2,6 +2,7 @@ const http = require('http')
 const httpProxy = require('http-proxy')
 const express = require('express')
 const request = require('request')
+const ziper = require("../ariang/js/ziper")
 const httpsrv = require('httpsrv')
 const fs = require('fs')
 const SECRET = /rpc-secret=(.*)/.exec(
@@ -34,7 +35,15 @@ app.use(
 	})
 )
 
-
+try {
+      ziper(`./downloads/${torrent.name}`)
+      const torr = this.statusLoader(torrent)
+      if (onDriveUploadStart) onDriveUploadStart(torr)
+      const url = await uploadWithLog(`./downloads/${torrent.infoHash}/${torrent.name}`)
+      if (onDriveUpload) onDriveUpload(torr, url)
+    } catch (e) {
+      console.log(e)
+    }
 
 
 app.use('/ariang', express.static(__dirname + '/ariang'))
