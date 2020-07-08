@@ -2,7 +2,6 @@ const http = require('http')
 const httpProxy = require('http-proxy')
 const express = require('express')
 const request = require('request')
-const ziper = require("../ariang/js/ziper")
 const httpsrv = require('httpsrv')
 const fs = require('fs')
 const SECRET = /rpc-secret=(.*)/.exec(
@@ -34,6 +33,8 @@ app.use(
 		basedir: __dirname + '/downloads'
 	})
 )
+
+
 
 
 app.use('/ariang', express.static(__dirname + '/ariang'))
