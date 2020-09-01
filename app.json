@@ -11,10 +11,7 @@
 			"description": "UEHToR's secret.It is the Master Password for Leacher Authorication",
 			"value": "cyberpass"
 		},
-		"GOOGLE_SITE_VERIFICATION": {
-			"description": "Go to Google Search Console, Add Your Property by URL Prefix and Paste the HTML Tag here",
-			"required": false
-		},
+		
 		"USERNAME": {
 			"description": "Add Username like this. Note : 1st Username => 1st Password",
 			"value": "[\"alpha\", \"User2\", \"User3\", \"User4\", \"User5\"]"
