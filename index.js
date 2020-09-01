@@ -95,7 +95,6 @@ for (var i=0; i<allMetaElements.length; i++) {
 <meta property="twitter:description" content="UEHTor is Online Torrent and File Downloading Site. Here You can Download Torrent, Can Download File From Any Server. You can Also Save it on Your Google Drive.">
 <meta property="twitter:image" content="/ariang/og.jpg">
 
- ${process.env.GOOGLE_SITE_VERIFICATION}
 	<link rel="stylesheet" type="text/css" href="ariang/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
